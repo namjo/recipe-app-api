@@ -75,7 +75,7 @@ class PrivateIngredientsApiTests(TestCase):
         self.assertTrue(exists)
         self.assertEqual(res.status_code, status.HTTP_201_CREATED)
 
-    def test_create_ingredient_invalie(self):
+    def test_create_ingredient_invalid(self):
         """Test create an invalid ingredient"""
         payload = {'name': ''}
         res = self.client.post(INGREDIENTS_URL, payload)
